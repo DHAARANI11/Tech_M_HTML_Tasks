@@ -1,0 +1,14 @@
+h1{
+    font-family: cursive;
+    color:navy;
+    text-align: center;
+}
+body{
+    background-image: url("pictures/kit.png");
+}
+h2{
+    color:brown
+}
+h2,ul{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Toggle</title>
+    <link rel="stylesheet" href="9.css">
+</head>
+<body>
+
+    <header>
+        <h1>Theme Toggle Example</h1>
+        <button id="theme-toggle">Toggle Theme</button>
+    </header>
+
+    <main>
+        <p>Welcome to the interactive theme toggle demo!</p>
+    </main>
+
+    <script>
+        const toggleButton = document.getElementById("theme-toggle");
+        const body = document.body;
+
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark-theme");
+        }
+
+        toggleButton.addEventListener("click", () => {
+            body.classList.toggle("dark-theme");
+            if (body.classList.contains("dark-theme")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        });
+    </script>
+
+</body>
+</html>
